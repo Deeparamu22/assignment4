@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="assignment4.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/fca89533a1.js" crossorigin="anonymous"></script>
+    <title>assignment4</title>
+  </head>
+  <body>
+    <div id="wholeContainer">
+      <p id="passwordHeader">Password Generator</p>
+      <div id="passwordDiv">
+        <div id="passwordText"></div>
+        <p id="copied"></p>
+        <i class="fa-regular fa-copy" onclick="copyText()" id="copyIcon"></i>
+      </div>
+      <div id="passgenContainer">
+        <div class="rangeDiv">
+          <div class="charLen">Character Length</div>
+          <div id="output">8</div>
+        </div>
+        <div class="slider">
+          <input type="range" id="rangeBar" min='4' value='8' max="21" oninput="changeCharLength()">
+        </div>
+        <div class="checkBoxDiv">
+          <div class="slider slider2">
+            <div class="checkbox1" id="upperCase" onclick="removeTick(this)">✔</div>
+            <div class="checkBoxText">Include Uppercase Letters</div>
+          </div>
+          <div class="slider slider2">
+            <div class="checkbox1" id="lowerCase" onclick="removeTick(this)">✔</div>
+            <div class="checkBoxText">Include Lowercase Letters</div>
+          </div>
+          <div class="slider slider2">
+            <div class="checkbox1" id="numbers" onclick="removeTick(this)">✔</div>
+            <div class="checkBoxText">Include Numbers</div>
+          </div>
+          <div class="slider slider2">
+            <div class="checkbox1" id="symbols" onclick="removeTick(this)">✔</div>
+            <div class="checkBoxText">Include Symbols</div>
+          </div>
+        </div>
+        <div class="Strength">
+          <p class="StrengthText">STRENGTH</p>
+          <p id="StrengthLevel">STRONG</p>
+          <div class="smallDivParent">
+            <div class="smallDiv"></div>
+            <div class="smallDiv"></div>
+            <div class="smallDiv"></div>
+            <div class="smallDiv"></div>
+          </div>
+        </div>
+        <div class="Strength1">
+          <button id="generate" onclick="generate()">GENERATE</button>
+        </div>
+      </div>
+    </div>
+    <script src="assignment4.js"></script>
+  </body>
+</html>
